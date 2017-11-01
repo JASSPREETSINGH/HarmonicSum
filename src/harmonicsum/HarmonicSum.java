@@ -15,15 +15,25 @@ public class HarmonicSum {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        double sum=1;
+        double sumL2R=0;
+        double sumR2L=0;
         int upperbound=100;
-        for(int denominator=1;denominator<upperbound;denominator++)
+        int lowerbound=1;
+        for(int denominator=1;denominator<=upperbound;denominator++)
         {
-            sum=sum+((double)1/denominator);//type cast int to double because int/int is equal to int 
+            sumL2R=sumL2R+((double)1/denominator);//type cast int to double because int/int is equal to int 
             
          
         }
-        System.out.println("sum is "+sum);
+        System.out.println("sum from left to right "+sumL2R);//less precise
+        
+        for(int denominator=100;denominator>=lowerbound;denominator--)//for sum right to left
+        {
+            sumR2L=sumR2L+((double)1/denominator);//type cast int to double because int/int is equal to int 
+            
+         
+        }
+        System.out.println("sum from right to left "+sumR2L);//more precise
         // TODO code application logic here
     }
     
