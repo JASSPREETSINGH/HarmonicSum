@@ -15,6 +15,15 @@ public class HarmonicSum {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        double sum=1;
+        int upperbound=100;
+        for(int denominator=1;denominator<upperbound;denominator++)
+        {
+            sum=sum+((double)1/denominator);//type cast int to double because int/int is equal to int 
+            
+         
+        }
+        System.out.println("sum is "+sum);
         // TODO code application logic here
     }
     
